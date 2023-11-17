@@ -1,0 +1,39 @@
+Sat Oct 28 22:44:23 2023
+COPYRIGHT (C) B&R Industrial Automation GmbH
+
+Sat Oct 28 22:44:23 2023
+No ARsim registration found!
+
+Sat Oct 28 22:44:23 2023
+InstanceName: 01da09d726ad6f50
+
+Sat Oct 28 22:44:23 2023
+WorkingDirectory: C:\Users\Denis\Desktop\7 sem\Pomer\lab2\lb\Temp\Simulation\SampleText\4PP065_0571_P74\
+
+Sat Oct 28 22:44:23 2023
+COMMAND_COLDSTART
+
+Sat Oct 28 22:44:25 2023
+Version: D4.52
+
+Sat Oct 28 22:45:10 2023
+COMMAND_TERMINATE
+
+Sat Oct 28 22:45:10 2023
+COMMAND_COLDSTART
+
+Sat Oct 28 22:45:12 2023
+Version: D4.52
+
+Sat Oct 28 22:45:12 2023
+COMMAND_TERMINATE
+
+Sat Oct 28 22:45:12 2023
+COMMAND_COLDSTART
+
+Sat Oct 28 22:45:15 2023
+Version: D4.52
+
+Sun Oct 29 00:14:42 2023
+COMMAND_TERMINATE
+
