@@ -26,9 +26,8 @@ void FB_LedSM(struct FB_LedSM* inst)
 				inst->led1 = !(inst->led1);
 				inst->led2 = !(inst->led2);
 				inst->led3 = !(inst->led3);
-				inst->timer =0;
+				inst->timer = 0;
 			}
-			inst->timer++;
 			break;
 		case ST_OPEN:
 			inst->led0 = 0;
@@ -45,29 +44,51 @@ void FB_LedSM(struct FB_LedSM* inst)
 		case ST_ACC_POS:
 			inst->led0 = 1;
 			inst->led1 = 1;
-			inst->led2 = 1;
+			if (inst->timer > 500)
+			{
+				inst->led2 = !(inst->led2);
+				inst->timer = 0;
+			}
+			
 			inst->led3 = 0;
 			break;
 		case ST_ACC_NEG:
 			inst->led0 = 1;
-			inst->led1 = 0;
+			if (inst->timer > 500)
+			{
+				inst->led1 = !(inst->led1);
+				inst->timer = 0;
+			}
+			
 			inst->led2 = 0;
 			inst->led3 = 0;
 			break;
 		case ST_POS:
 			inst->led0 = 1;
-			inst->led1 = 1;
+			if (inst->timer > 500)
+			{
+				inst->led1 = !(inst->led1);
+				inst->timer = 0;
+			}
 			inst->led2 = 0;
 			inst->led3 = 0;
 			break;
 		case ST_NEG:
 			inst->led0 = 1;
 			inst->led1 = 1;
-			inst->led2 = 0;
+			if (inst->timer > 500)
+			{
+				inst->led2 = !(inst->led2);
+				inst->timer = 0;
+			}
 			inst->led3 = 0;
 			break;
 		case ST_DEC_POS:
-			inst->led0 = 1;
+			if (inst->timer > 500)
+			{
+				inst->led0 = !(inst->led0);
+				inst->timer = 0;
+			}
 			inst->led1 = 0;
 			inst->led2 = 0;
 			inst->led3 = 0;
@@ -76,8 +97,13 @@ void FB_LedSM(struct FB_LedSM* inst)
 			inst->led0 = 1;
 			inst->led1 = 1;
 			inst->led2 = 1;
-			inst->led3 = 0;
+			if (inst->timer > 500)
+			{
+				inst->led3 = !(inst->led3);
+				inst->timer = 0;
+			}
 			break;
 	}
+	inst->timer++;
 	
 }
