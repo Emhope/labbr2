@@ -1,8 +1,0 @@
-{
-  global:
-    FB_DriveSM;
-    FB_DoorSM;
-    FB_LedSM;
-  local:
-    *;
- };
